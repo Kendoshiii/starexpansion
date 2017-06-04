@@ -1,0 +1,41 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube",
+    "textures": {
+      "particle": "se:blocks/generator/netherstar/side",
+      "down": "se:blocks/generator/netherstar/side",
+      "up": "se:blocks/generator/netherstar/side",
+      "north": "se:blocks/generator/netherstar/front",
+      "south": "se:blocks/generator/netherstar/side",
+      "east": "se:blocks/generator/netherstar/side",
+      "west": "se:blocks/generator/netherstar/side"
+    },
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "active": {
+      "true": {
+        "textures": {
+          "north": "se:blocks/generator/netherstar/front_active",
+          "south": "se:blocks/generator/netherstar/side"
+        }
+      },
+      "false": {}
+    },
+    "facing": {
+      "north": {},
+      "south": {"y": 180},
+      "west": {"y": 270},
+      "east": {"y": 90}
+    },
+    "normal": [
+      {
+        "textures": {
+          "north": "se:blocks/generator/netherstar/front",
+          "south": "se:blocks/generator/netherstar/side"
+        }
+      }
+    ]
+  }
+}

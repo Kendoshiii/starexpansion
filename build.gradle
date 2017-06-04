@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+group = package_group
+archivesBaseName = mod_name
+version = mod_version
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+minecraft {
+    version = "1.11.2-13.20.0.2299"
+    runDir = "run"
+    mappings = "snapshot_20161220"
+	useDepAts = true
+}
+
+repositories {
+
+	maven { url "http://dvs1.progwml6.com/files/maven" }
+	maven { url "http://chickenbones.net/maven/" }
+	maven { url "http://maven.tterrag.com" } 
+
+}
+
+dependencies {
+   
+   deobfCompile "mezz.jei:jei_${mc_version}:${jei_version}"
+   deobfCompile "mcjty.theoneprobe:TheOneProbe:1.1x-${top_version}"
+   compile "codechicken:CodeChickenLib:${mc_version}-${ccl_version}:deobf"
+   
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

@@ -1,0 +1,120 @@
+itemGroup.se=Star Expansion
+
+item.se:ingot.0.name=Copper Ingot
+item.se:ingot.1.name=Tin Ingot
+item.se:ingot.2.name=Bronze Ingot
+item.se:ingot.3.name=Silver Ingot
+item.se:ingot.4.name=Lead Ingot
+item.se:ingot.5.name=Steel Ingot
+item.se:ingot.6.name=Carbon-Iron Ingot
+item.se:ingot.7.name=Radiant Star Ingot
+
+item.se:nugget.0.name=Copper Nugget
+item.se:nugget.1.name=Tin Nugget
+item.se:nugget.2.name=Bronze Nugget
+item.se:nugget.3.name=Silver Nugget
+item.se:nugget.4.name=Lead Nugget
+item.se:nugget.5.name=Steel Nugget
+
+item.se:plate.0.name=Copper Plate
+item.se:plate.1.name=Tin Plate
+item.se:plate.2.name=Bronze Plate
+item.se:plate.3.name=Silver Plate
+item.se:plate.4.name=Lead Plate
+item.se:plate.5.name=Steel Plate
+
+item.se:dust.0.name=Copper Dust
+item.se:dust.1.name=Tin Dust
+item.se:dust.2.name=Bronze Dust
+item.se:dust.3.name=Silver Dust
+item.se:dust.4.name=Lead Dust
+item.se:dust.5.name=Steel Dust
+item.se:dust.6.name=Carbon Dust
+
+item.se:capacitor_4k.name=Capacitor
+item.se:capacitor_8k.name=Capacitor
+item.se:capacitor_16k.name=Capacitor
+item.se:capacitor_32k.name=Capacitor
+item.se:capacitor_64k.name=Capacitor
+item.se:capacitor_128k.name=Capacitor
+item.se:capacitor_512k.name=Capacitor
+item.se:capacitor_1024k.name=Capacitor
+
+item.se:experience_orb.name=Experience Crystal
+
+item.se:growth_crystal.name=Growth Crystal
+item.se:lava_crystal.name=Lava Crystal
+item.se:water_crystal.name=Water Crystal
+item.se:watering_crystal.name=Watering Crystal
+
+item.se:copper_axe.name=Copper Axe
+item.se:copper_hoe.name=Copper Hoe
+item.se:copper_pickaxe.name=Copper Pickaxe
+item.se:copper_shovel.name=Copper Shovel
+item.se:copper_sword.name=Copper Sword
+
+item.se:bronze_axe.name=Bronze Axe
+item.se:bronze_hoe.name=Bronze Hoe
+item.se:bronze_pickaxe.name=Bronze Pickaxe
+item.se:bronze_shovel.name=Bronze Shovel
+item.se:bronze_sword.name=Bronze Sword
+
+item.se:emerald_axe.name=Emerald Axe
+item.se:emerald_hoe.name=Emerald Hoe
+item.se:emerald_pickaxe.name=Emerald Pickaxe
+item.se:emerald_shovel.name=Emerald Shovel
+item.se:emerald_sword.name=Emerald Sword
+
+item.se:forge_hammer.name=Forge Hammer
+item.se:battery.name=Battery
+
+item.emerald_helmet.name=Emerald Helmet
+item.emerald_chest.name=Emerald Chestplate
+item.emerald_leggs.name=Emerald Leggings
+item.emerald_boots.name=Emerald Boots
+
+
+block.se:blockcopper.name=Copper Block
+block.se:blocktin.name=Tin Block
+block.se:blockbronze.name=Bronze Block
+block.se:blocksilver.name=Silver Block
+block.se:blocklead.name=Lead Block
+block.se:blockradiant.name=Radiant Star Block
+
+block.se:orecopper.name=Copper Ore
+block.se:oretin.name=Tin Ore
+block.se:oresilver.name=Silver Ore
+block.se:orelead.name=Lead Ore
+block.se:oreradiant.name=Radiant Star Ore
+
+block.se:blockatreactorcontroller.name=Reactor Controller
+block.se:blockatreactorpowerconnector.name=Reactor Power Connector
+block.se:blockatreactorglass.name=Reactor Glass
+block.se:blocksteelcase.name=Reactor Casing
+
+block.se:blockmeteorite.name=Meteorite Block
+
+block.se:blockStarGenerator.name=Star-Flux Generator
+block.se:blockNetherStarGenerator.name=Nether Star Generator
+block.se:blockFurnaceGenerator.name=Furnace Generator
+block.se:blockFluxRepairer.name=Star-Flux Repairer
+
+se.lava.tooltip1=Acts as infinitely full lava bucket
+se.lava.tooltip2=Right click to fill tanks
+
+se.grow.tooltip1=Accelerates growth of nearby crops
+
+se.water.tooltip1=Acts as infinitely full water bucket
+se.water.tooltip2=Right click to fill tanks or cauldrons
+
+se.watering.tooltip1=Waters an 9x9 Area
+
+tooltip.se.capacitor.discharge=Charging other items in inventory
+tooltip.se.capacitor.noDischarge=Not charging other items in inventory
+tooltip.se.capacitor.changeMode=Sneak-right-click to toggle
+
+info.se.hasSavedData.txt=Contents Saved!
+info.se.energyBuffer.txt=Energy Stored
+starexpansion.stargenerator.gui.name=Star-Flux Generator
+starexpansion.furnacegenerator.gui.name=Furnace Generator
+starexpansion.netherstargenerator.gui.name=Nether Star Generator

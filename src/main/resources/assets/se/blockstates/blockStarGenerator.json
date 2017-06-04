@@ -1,0 +1,41 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube",
+    "textures": {
+      "particle": "se:blocks/generator/star-flux/side",
+      "down": "se:blocks/generator/star-flux/side",
+      "up": "se:blocks/generator/star-flux/side",
+      "north": "se:blocks/generator/star-flux/front",
+      "south": "se:blocks/generator/star-flux/side",
+      "east": "se:blocks/generator/star-flux/side",
+      "west": "se:blocks/generator/star-flux/side"
+    },
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "active": {
+      "true": {
+        "textures": {
+          "north": "se:blocks/generator/star-flux/front_active",
+          "south": "se:blocks/generator/star-flux/side"
+        }
+      },
+      "false": {}
+    },
+    "facing": {
+      "north": {},
+      "south": {"y": 180},
+      "west": {"y": 270},
+      "east": {"y": 90}
+    },
+    "normal": [
+      {
+        "textures": {
+          "north": "se:blocks/generator/star-flux/front",
+          "south": "se:blocks/generator/star-flux/side"
+        }
+      }
+    ]
+  }
+}

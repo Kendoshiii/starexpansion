@@ -1,0 +1,175 @@
+package de.se.common.utils.helper;
+
+import java.util.Random;
+
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import codechicken.lib.asm.ObfMapping;
+import de.se.StarExpansion;
+import de.se.common.utils.SEUtils;
+
+public class LogHelper {
+
+	public static Logger logger = LogManager.getLogger(StarExpansion.MODID);
+
+    /**
+     * Log with a supplied level.
+     */
+    public static void log(Level logLevel, Object object) {
+        logger.log(logLevel, String.valueOf(object));
+    }
+
+    public static void log(Level logLevel, Object object, Throwable throwable) {
+        logger.log(logLevel, String.valueOf(object), throwable);
+    }
+
+    //Standard log entries.
+
+    public static void dev(Object object) {
+        if (!ObfMapping.obfuscated) {
+            log(Level.INFO, "[DEV]: " + object);
+        }
+    }
+
+    public static void all(Object object) {
+        log(Level.ALL, object);
+    }
+
+    public static void debug(Object object) {
+        log(Level.DEBUG, object);
+    }
+
+    public static void error(Object object) {
+        log(Level.ERROR, object);
+    }
+
+    public static void fatal(Object object) {
+        log(Level.FATAL, object);
+    }
+
+    public static void info(Object object) {
+        log(Level.INFO, object);
+    }
+
+    public static void off(Object object) {
+        log(Level.OFF, object);
+    }
+
+    public static void trace(Object object) {
+        log(Level.TRACE, object);
+    }
+
+    public static void warn(Object object) {
+        log(Level.WARN, object);
+    }
+
+    //log with format.
+
+    public static void dev(String object, Object... format) {
+        if (!ObfMapping.obfuscated) {
+            log(Level.INFO, "[DEV]: " + String.format(object, format));
+        }
+    }
+
+    public static void all(String object, Object... format) {
+        log(Level.ALL, String.format(object, format));
+    }
+
+    public static void debug(String object, Object... format) {
+        log(Level.DEBUG, String.format(object, format));
+    }
+
+    public static void error(String object, Object... format) {
+        log(Level.ERROR, String.format(object, format));
+    }
+
+    public static void fatal(String object, Object... format) {
+        log(Level.FATAL, String.format(object, format));
+    }
+
+    public static void info(String object, Object... format) {
+        log(Level.INFO, String.format(object, format));
+    }
+
+    public static void off(String object, Object... format) {
+        log(Level.OFF, String.format(object, format));
+    }
+
+    public static void trace(String object, Object... format) {
+        log(Level.TRACE, String.format(object, format));
+    }
+
+    public static void warn(String object, Object... format) {
+        log(Level.WARN, String.format(object, format));
+    }
+
+    //Log Throwable with format.
+
+    public static void allError(String object, Throwable throwable, Object... format) {
+        log(Level.ALL, String.format(object, format), throwable);
+    }
+
+    public static void debugError(String object, Throwable throwable, Object... format) {
+        log(Level.DEBUG, String.format(object, format), throwable);
+    }
+
+    public static void errorError(String object, Throwable throwable, Object... format) {
+        log(Level.ERROR, String.format(object, format), throwable);
+    }
+
+    public static void fatalError(String object, Throwable throwable, Object... format) {
+        log(Level.FATAL, String.format(object, format), throwable);
+    }
+
+    public static void infoError(String object, Throwable throwable, Object... format) {
+        log(Level.INFO, String.format(object, format), throwable);
+    }
+
+    public static void offError(String object, Throwable throwable, Object... format) {
+        log(Level.OFF, String.format(object, format), throwable);
+    }
+
+    public static void traceError(String object, Throwable throwable, Object... format) {
+        log(Level.TRACE, String.format(object, format), throwable);
+    }
+
+    public static void warnError(String object, Throwable throwable, Object... format) {
+        log(Level.WARN, String.format(object, format), throwable);
+    }
+
+    //Log throwable.
+    public static void allError(String object, Throwable throwable) {
+        log(Level.ALL, object, throwable);
+    }
+
+    public static void debugError(String object, Throwable throwable) {
+        log(Level.DEBUG, object, throwable);
+    }
+
+    public static void errorError(String object, Throwable throwable) {
+        log(Level.ERROR, object, throwable);
+    }
+
+    public static void fatalError(String object, Throwable throwable) {
+        log(Level.FATAL, object, throwable);
+    }
+
+    public static void infoError(String object, Throwable throwable) {
+        log(Level.INFO, object, throwable);
+    }
+
+    public static void offError(String object, Throwable throwable) {
+        log(Level.OFF, object, throwable);
+    }
+
+    public static void traceError(String object, Throwable throwable) {
+        log(Level.TRACE, object, throwable);
+    }
+
+    public static void warnError(String object, Throwable throwable) {
+        log(Level.WARN, object, throwable);
+    }
+
+}

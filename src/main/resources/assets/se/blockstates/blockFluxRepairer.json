@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "se:blockFluxRepairer" },
+    "facing=south": { "model": "se:blockFluxRepairer", "y": 180 },
+    "facing=west":  { "model": "se:blockFluxRepairer", "y": 270 },
+    "facing=east":  { "model": "se:blockFluxRepairer", "y": 90 }
+  }
+}

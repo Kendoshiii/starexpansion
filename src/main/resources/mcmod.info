@@ -1,0 +1,16 @@
+[
+{
+  "modid": "se",
+  "name": "Star Expansion",
+  "description": "Generating Power from Stars",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Akiishi"],
+  "credits": "Nothing to see here atm.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
