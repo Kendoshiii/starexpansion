@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "se:blocks/repairer/framed_steel",
+    "front": "se:blocks/repairer/framed_steel_hammer",
+    "side": "se:blocks/repairer/framed_steel"
+  }
+}

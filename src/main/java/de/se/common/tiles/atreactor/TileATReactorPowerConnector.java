@@ -5,7 +5,6 @@ import java.lang.reflect.Method;
 
 import de.se.SEBlocks;
 import de.se.common.config.ConfigValues;
-import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -170,16 +169,14 @@ public class TileATReactorPowerConnector extends TileEntity implements ITickable
 	{
 		return 0;
 	}
-	
+
 	@Override
-	public boolean canExtract()
-	{
+	public boolean canExtract() {
 		return true;
 	}
-	
+
 	@Override
-	public boolean canReceive()
-	{
+	public boolean canReceive() {
 		return false;
 	}
 

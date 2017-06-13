@@ -1,8 +1,13 @@
 package de.se.common.items;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+
+/*
+ * This class was created by Kendoshiii and modified with the Rarity code written by Ellpeck
+ */
 
 public class ItemBlockBase extends ItemBlock{
 
@@ -28,5 +33,21 @@ public class ItemBlockBase extends ItemBlock{
 
 		return getUnlocalizedName();
 	}
+	
+    @Override
+    public EnumRarity getRarity(ItemStack stack){
+        if(this.block instanceof ICustomRarity){
+            return ((ICustomRarity)this.block).getRarity(stack);
+        }
+        else{
+            return EnumRarity.COMMON;
+        }
+    }
+
+    public interface ICustomRarity{
+
+        EnumRarity getRarity(ItemStack stack);
+
+    }
 	
 }

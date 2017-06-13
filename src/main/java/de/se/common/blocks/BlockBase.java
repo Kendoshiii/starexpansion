@@ -2,8 +2,11 @@ package de.se.common.blocks;
 
 import de.se.StarExpansion;
 import de.se.common.items.ItemBlockBase;
+import de.se.common.lib.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -20,7 +23,7 @@ public class BlockBase extends Block {
 		this.setHardness(5F);
 		this.setResistance(10F);
 		setHardness(1.9F);
-		setRegistryName(StarExpansion.MODID, name);
+		setRegistryName(Reference.MODID, name);
 		setCreativeTab(StarExpansion.INSTANCE.tab);
 	}
 
@@ -31,17 +34,12 @@ public class BlockBase extends Block {
 
 	@Override
 	public String getUnlocalizedName() {
-		return "block." + StarExpansion.MODID + ":" + name;
+		return "block." + Reference.MODID + ":" + name;
 	}
 
 	public Item createItem() {
 		return new ItemBlockBase(this, false);
 	}
 
-	public interface IBlockEnum extends IStringSerializable
-	{
-		int getMeta();
-		boolean listForCreative();
-	}
 	
 }

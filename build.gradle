@@ -1,25 +1,44 @@
 buildscript {
     repositories {
-        jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+        classpath 'com.matthewprenger:CurseGradle:1.0-SNAPSHOT'
     }
 }
-apply plugin: 'net.minecraftforge.gradle.forge'
 
-group = package_group
-archivesBaseName = mod_name
-version = mod_version
+apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'com.matthewprenger.cursegradle'
+
+ext.configFile = file('build.properties')
+ext.config = parseConfig(configFile)
+
+group = config.package_group
+archivesBaseName = config.mod_name
+version = "${config.version}-${config.build_number}"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 minecraft {
-    version = "1.11.2-13.20.0.2299"
+    version = "${config.mc_version}-${config.forge_version}"
     runDir = "run"
-    mappings = "snapshot_20161220"
+    mappings = config.mappings_version
+	
+	replace 'GRADLE:BUILD', config.build_number
+	replace 'GRADLE:VERSION', config.version
+	
+	replaceIn 'Reference.java'
+	
 	useDepAts = true
 }
 
@@ -27,13 +46,15 @@ repositories {
 
 	maven { url "http://dvs1.progwml6.com/files/maven" }
 	maven { url "http://maven.tterrag.com" } 
+	maven { url "http://dogforce-games.com/maven" }
 
 }
 
 dependencies {
    
-   deobfCompile "mezz.jei:jei_${mc_version}:${jei_version}"
-   deobfCompile "mcjty.theoneprobe:TheOneProbe:1.1x-${top_version}"
+   deobfCompile "mezz.jei:jei_1.11.2:4.3.6.+"
+   deobfCompile "mcjty.theoneprobe:TheOneProbe:1.1x-1.4.+"
+   deobfCompile "gigaherz.guidebook:Guidebook-1.11.0:1.7.0"
    
 }
 
@@ -48,3 +69,44 @@ processResources {
         exclude 'mcmod.info'
     }
 }
+
+task deobfJar(type: Jar) {
+    from(sourceSets.main.output)
+    archiveName = "${baseName} ${version}-deobf.${extension}"
+}
+
+artifacts {
+    archives deobfJar
+}
+
+task incrementBuildNumber(dependsOn: 'reobfJar') << {
+    config.build_number = (config.build_number.toString().toInteger()) + 1
+    configFile.withWriter {
+        config.toProperties().store(it, "")
+    }
+
+    // todo make this flexibile - collection of supported mc versions
+
+    file('web/versions.ini').append("\n${version}=${minecraft.version}")
+    file("${config.dir_repo}/version/${minecraft.version}.txt").write("${version}")
+}
+
+def parseConfig(File config) {
+    config.withReader {
+        def prop = new Properties()
+        prop.load(it)
+        return (new ConfigSlurper().parse(prop))
+    }
+}
+
+
+jar {
+    //rename the default output, for some better... sanity with scipts
+    archiveName = "${baseName} ${version}.${extension}"
+
+    exclude "**/*.bat"
+    exclude "**/*.psd"
+    exclude "**/*.exe"
+}
+
+defaultTasks 'clean', 'build', 'incrementBuildNumber'

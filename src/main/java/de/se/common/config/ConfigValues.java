@@ -1,11 +1,7 @@
 package de.se.common.config;
 
-import java.util.Map;
 import java.util.Set;
 
-import com.google.common.collect.Maps;
-
-import de.se.common.compat.SECompatHandler;
 import net.minecraftforge.common.config.Property;
 
 public class ConfigValues {
@@ -20,7 +16,11 @@ public class ConfigValues {
 	public static int largeSFCapacitorIn = 4000;	
 	public static int largeSFCapacitorOut = 4000;	
 	public static boolean enableCreativeSFCapacitor = true;	
-	public static int reactorGeneration = 480;	
+	public static int reactorGeneration = 480;
+	public static int repairerEnergyPerPoint = 1000;
+	public static boolean restrictRepairs;
+	public static Set<String> repairerBlacklist;
+	public static Property blProperty;
 	public static boolean oreGenCopper = true;
 	public static boolean oreGenTin = true;	
 	public static boolean oreGenSilver = true;
@@ -53,13 +53,9 @@ public class ConfigValues {
 	public static int forgeHammerDurability = 150;	
 	public static int emeraldArmorDurability = 25;
 	public static int modGuiIndex = 0;
-	public static int starGeneratorGUI = modGuiIndex++;
-	public static int netherStarGeneratorGUI = modGuiIndex++;
-	public static int furnaceGeneratorGUI = modGuiIndex++;
 	public static int repairerGUI = modGuiIndex++;
 	public static boolean compatTOP = true;
 
 	public static boolean allowFlight = true;
-
-	
+		
 }

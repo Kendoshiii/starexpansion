@@ -31,9 +31,7 @@ public class Names {
 	public static String blockMeteorite = "blockmeteorite";
 	
 	public static String forge_hammer = "forge_hammer";
-	
-	public static String materialExperiencePearl = "materialexperiencepearl";
-	
+
 	public static String copper_axe = "copper_axe";
 	public static String bronze_axe = "bronze_axe";
 	public static String emerald_axe = "emerald_axe";
@@ -50,6 +48,8 @@ public class Names {
 	public static String capacitor_128k = "capacitor_128k";
 	public static String capacitor_512k = "capacitor_512k";
 	public static String capacitor_1024k = "capacitor_1024k";
+	
+	public static String energyDisplayer = "energy_displayer";
 	
 	//Minecraft
 	public static String wooden_paxel = "wooden_paxel";
@@ -84,6 +84,7 @@ public class Names {
 	//AA
 	
 	//Avaritia
+	public static String infinity_paxel = "infinity_paxel";
 	
 	//Blood Magic
 	

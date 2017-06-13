@@ -3,7 +3,6 @@ package de.se;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.se.common.config.ConfigValues;
 import de.se.common.handler.MaterialHandler;
 import de.se.common.items.accs.ItemGrowthCrystal;
 import de.se.common.items.accs.ItemLavaCrystal;
@@ -13,11 +12,9 @@ import de.se.common.items.armor.emerald.ItemEmeraldBoots;
 import de.se.common.items.armor.emerald.ItemEmeraldChest;
 import de.se.common.items.armor.emerald.ItemEmeraldHelmet;
 import de.se.common.items.armor.emerald.ItemEmeraldLeggs;
-import de.se.common.items.energy.capacitor.ItemEnergyCapacitor;
+import de.se.common.items.energy.ItemEnergyCapacitor;
 import de.se.common.items.material.ItemDust;
-import de.se.common.items.material.ItemExperiencePearl;
 import de.se.common.items.material.ItemIngot;
-import de.se.common.items.material.ItemMaterial;
 import de.se.common.items.material.ItemNugget;
 import de.se.common.items.material.ItemPlate;
 import de.se.common.items.tools.ToolAxe;
@@ -37,7 +34,7 @@ public class SEItems {
 	public static List<Item> ITEMS = new ArrayList();
 
 	// Materials
-	public static Item INGOT, NUGGET, PLATE, DUST, EXPERIENCE_PEARL;
+	public static Item INGOT, NUGGET, PLATE, DUST;
 
 	// Tools
 	public static Item COPPER_AXE, BRONZE_AXE, EMERALD_AXE;
@@ -68,8 +65,7 @@ public class SEItems {
 		NUGGET = new ItemNugget();
 		PLATE = new ItemPlate();
 		DUST = new ItemDust();
-		EXPERIENCE_PEARL = new ItemExperiencePearl(Names.materialExperiencePearl);
-		
+
 		GROWTH_CRYSTAL = new ItemGrowthCrystal();
 		LAVA_CRYSTAL = new ItemLavaCrystal();
 		WATER_CRYSTAL = new ItemWaterCrystal();
@@ -97,15 +93,15 @@ public class SEItems {
 
 		FORGE_HAMMER = new ToolForgeHammer(256, Names.forge_hammer);
 
-		WOODEN_PAXEL = new ToolPaxel(Item.ToolMaterial.WOOD, Names.wooden_paxel);
-		STONE_PAXEL = new ToolPaxel(Item.ToolMaterial.STONE, Names.stone_paxel);
-		IRON_PAXEL = new ToolPaxel(Item.ToolMaterial.IRON, Names.iron_paxel);
-		GOLD_PAXEL = new ToolPaxel(Item.ToolMaterial.GOLD, Names.gold_paxel);
-		DIAMOND_PAXEL = new ToolPaxel(Item.ToolMaterial.DIAMOND, Names.diamond_paxel);
+		WOODEN_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.WOODEN, Names.wooden_paxel);
+		STONE_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.STONE, Names.stone_paxel);
+		IRON_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.IRON, Names.iron_paxel);
+		GOLD_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.GOLDEN, Names.gold_paxel);
+		DIAMOND_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.DIAMOND, Names.diamond_paxel);
 
-		COPPER_PAXEL = new ToolPaxel(MaterialHandler.TOOLS.COPPER, Names.copper_paxel);
-		BRONZE_PAXEL = new ToolPaxel(MaterialHandler.TOOLS.BRONZE, Names.bronze_paxel);
-		EMERALD_PAXEL = new ToolPaxel(MaterialHandler.TOOLS.EMERALD, Names.emerald_paxel);
+		COPPER_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.COPPER, Names.copper_paxel);
+		BRONZE_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.BRONZE, Names.bronze_paxel);
+		EMERALD_PAXEL = new ToolPaxel(MaterialHandler.PAXEL.EMERALD, Names.emerald_paxel);
 
 		EMERALD_BOOTS = new ItemEmeraldBoots("emerald_boots", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.FEET);
 		EMERALD_CHEST = new ItemEmeraldChest("emerald_chest", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.CHEST);
@@ -121,7 +117,7 @@ public class SEItems {
 		CAPACITOR128K = new ItemEnergyCapacitor(128000, 3200, Names.capacitor_128k);
 		CAPACITOR512K = new ItemEnergyCapacitor(512000, 6400, Names.capacitor_512k);
 		CAPACITOR1024K = new ItemEnergyCapacitor(1024000, 12800, Names.capacitor_1024k);
-
+		
 		reg();
 
 	}
@@ -132,7 +128,6 @@ public class SEItems {
 		ITEMS.add(NUGGET);
 		ITEMS.add(PLATE);
 		ITEMS.add(DUST);
-		ITEMS.add(EXPERIENCE_PEARL);
 
 		ITEMS.add(BATTERY);
 		
@@ -159,6 +154,15 @@ public class SEItems {
 		ITEMS.add(EMERALD_SHOVEL);
 		ITEMS.add(EMERALD_SWORD);
 		
+		ITEMS.add(WOODEN_PAXEL);
+		ITEMS.add(STONE_PAXEL);
+		ITEMS.add(IRON_PAXEL);
+		ITEMS.add(GOLD_PAXEL);
+		ITEMS.add(DIAMOND_PAXEL);
+		ITEMS.add(COPPER_PAXEL);
+		ITEMS.add(BRONZE_PAXEL);
+		ITEMS.add(EMERALD_PAXEL);
+		
 		ITEMS.add(EMERALD_HELMET);
 		ITEMS.add(EMERALD_CHEST);
 		ITEMS.add(EMERALD_LEGGS);
@@ -173,6 +177,7 @@ public class SEItems {
 		ITEMS.add(CAPACITOR512K);
 		ITEMS.add(CAPACITOR1024K);
 
+		
 		for (Item item : ITEMS) {
 			GameRegistry.register(item);
 		}

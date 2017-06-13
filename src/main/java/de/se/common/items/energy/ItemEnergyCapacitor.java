@@ -1,10 +1,11 @@
-package de.se.common.items.energy.capacitor;
+package de.se.common.items.energy;
 
 import java.util.List;
 
 import cofh.api.energy.IEnergyContainerItem;
 import de.se.StarExpansion;
 import de.se.common.items.ItemEnergyBase;
+import de.se.common.lib.Reference;
 import de.se.common.utils.helper.StringHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +17,10 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+
+/*
+ * This class was created by Ellpeck and modified by Kendoshiii
+ */
 
 public class ItemEnergyCapacitor extends ItemEnergyBase{
 
@@ -92,8 +97,8 @@ public class ItemEnergyCapacitor extends ItemEnergyBase{
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean bool){
         super.addInformation(stack, player, list, bool);
-        list.add(StringHelper.localize("tooltip."+StarExpansion.MODID+".capacitor."+(this.isDischargeMode(stack) ? "discharge" : "noDischarge")));
-        list.add(StringHelper.localize("tooltip."+StarExpansion.MODID+".capacitor.changeMode"));
+        list.add(StringHelper.localize("tooltip."+Reference.MODID+".capacitor."+(this.isDischargeMode(stack) ? "discharge" : "noDischarge")));
+        list.add(StringHelper.localize("tooltip."+Reference.MODID+".capacitor.changeMode"));
     }
     
 }

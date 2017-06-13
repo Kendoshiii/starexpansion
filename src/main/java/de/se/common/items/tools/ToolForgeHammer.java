@@ -2,8 +2,8 @@ package de.se.common.items.tools;
 
 import java.util.List;
 
-import de.se.StarExpansion;
 import de.se.common.items.ItemBase;
+import de.se.common.lib.Reference;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
@@ -22,7 +22,7 @@ public class ToolForgeHammer extends ItemBase{
 
 	@Override
 	public String getUnlocalizedName(){
-		return "item." + StarExpansion.MODID + ":" + name;
+		return "item." + Reference.MODID + ":" + name;
 	}
 	
 	@Override

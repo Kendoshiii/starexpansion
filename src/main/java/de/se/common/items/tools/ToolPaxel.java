@@ -8,7 +8,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 
 import de.se.SEBlocks;
-import de.se.StarExpansion;
+import de.se.common.lib.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -47,7 +47,7 @@ public class ToolPaxel extends ItemPickaxe {
 
 	@Override
 	public String getUnlocalizedName(){
-		return "item." + StarExpansion.MODID + ":" + name;
+		return "item." + Reference.MODID + ":" + name;
 	}
 	
 	@Override

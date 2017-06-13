@@ -3,6 +3,7 @@ package de.se.common.items.tools;
 import java.util.List;
 
 import de.se.StarExpansion;
+import de.se.common.lib.Reference;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -23,7 +24,7 @@ public class ToolSword extends ItemSword{
 	
 	@Override
 	public String getUnlocalizedName(){
-		return "item." + StarExpansion.MODID + ":" + name;
+		return "item." + Reference.MODID + ":" + name;
 	}
 	
 	@Override

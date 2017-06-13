@@ -16,6 +16,9 @@ public class ItemPlate extends ItemBase{
 	public static final int PLATE_SILVER = 3;
 	public static final int PLATE_LEAD = 4;
 	public static final int PLATE_STEEL = 5;
+	public static final int PLATE_IRON = 6;
+	public static final int PLATE_GOLD = 7;
+	
 	
 	public ItemPlate() {
 		super("plate");
@@ -26,7 +29,7 @@ public class ItemPlate extends ItemBase{
 	
 	@Override
 	public void getSubItems(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
-		for (int i = 0; i<=5; i++){
+		for (int i = 0; i<=7; i++){
 			list.add(new ItemStack(item, 1, i));
 		}
 	}

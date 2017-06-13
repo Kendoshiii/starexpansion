@@ -27,16 +27,25 @@ public class OreDictHelper {
 		OreDictionary.registerOre("ingotLead", new ItemStack(SEItems.INGOT, 1, ItemIngot.INGOT_LEAD));
 		OreDictionary.registerOre("ingotSteel", new ItemStack(SEItems.INGOT, 1, ItemIngot.INGOT_STEEL));
 		
-		OreDictionary.registerOre("materialCoal", Items.COAL);
+		OreDictionary.registerOre("coal", Items.COAL);
 
 		OreDictionary.registerOre("dustGlowstone", Items.GLOWSTONE_DUST);
+		
 		OreDictionary.registerOre("dustCopper", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_COPPER));
 		OreDictionary.registerOre("dustTin", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_TIN));
 		OreDictionary.registerOre("dustBronze", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_BRONZE));
 		OreDictionary.registerOre("dustSilver", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_SILVER));
 		OreDictionary.registerOre("dustLead", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_LEAD));
 		OreDictionary.registerOre("dustSteel", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_STEEL));
-		OreDictionary.registerOre("dustCarbon", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_CARBON));
+		OreDictionary.registerOre("dustCoal", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_CARBON));
+		OreDictionary.registerOre("dustIron", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_IRON));
+		OreDictionary.registerOre("dustGold", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_GOLD));
+		OreDictionary.registerOre("dustDiamond", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_DIAMOND));
+		OreDictionary.registerOre("dustEmerald", new ItemStack(SEItems.DUST, 1, ItemDust.DUST_EMERALD));
+		
+		OreDictionary.registerOre("gemQuartz", new ItemStack(Items.QUARTZ));
+		OreDictionary.registerOre("dustRedstone", new ItemStack(Items.REDSTONE));
+		OreDictionary.registerOre("gemLapis", new ItemStack(Items.DYE, 1, 4));
 		
 	}
 	
@@ -48,7 +57,20 @@ public class OreDictHelper {
 		OreDictionary.registerOre("oreLead", SEBlocks.LEAD_ORE);
 		OreDictionary.registerOre("oreRadiant", SEBlocks.RADIANT_ORE);
 		
+		OreDictionary.registerOre("oreRedstone", Blocks.REDSTONE_ORE);
+		OreDictionary.registerOre("oreLapis", Blocks.LAPIS_ORE);
+		OreDictionary.registerOre("oreCoal", Blocks.COAL_ORE);
+		OreDictionary.registerOre("oreIron", Blocks.IRON_ORE);
+		OreDictionary.registerOre("oreGold", Blocks.GOLD_ORE);
+		OreDictionary.registerOre("oreDiamond", Blocks.DIAMOND_ORE);
+		OreDictionary.registerOre("oreEmerald", Blocks.EMERALD_ORE);
+		OreDictionary.registerOre("oreQuartz", Blocks.QUARTZ_ORE);
+		
 		OreDictionary.registerOre("blockObsidian", Blocks.OBSIDIAN);
+		OreDictionary.registerOre("blockCoal", Blocks.COAL_BLOCK);
+		OreDictionary.registerOre("stone", Blocks.STONE);
+		OreDictionary.registerOre("cobblestone", Blocks.COBBLESTONE);
+		OreDictionary.registerOre("sand", Blocks.SAND);
 		
 		OreDictionary.registerOre("blockMetalCopper", SEBlocks.COPPER_BLOCK);
 		OreDictionary.registerOre("blockMetalTin", SEBlocks.TIN_BLOCK);

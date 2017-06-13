@@ -1,19 +1,16 @@
 package de.se.common.utils.helper;
 
-import java.util.Random;
-
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import codechicken.lib.asm.ObfMapping;
 import de.se.StarExpansion;
-import de.se.common.utils.SEUtils;
+import de.se.common.lib.Reference;
 
 public class LogHelper {
 
-	public static Logger logger = LogManager.getLogger(StarExpansion.MODID);
-
+	public static Logger logger = LogManager.getLogger(Reference.MODID);
+	
     /**
      * Log with a supplied level.
      */
@@ -26,12 +23,6 @@ public class LogHelper {
     }
 
     //Standard log entries.
-
-    public static void dev(Object object) {
-        if (!ObfMapping.obfuscated) {
-            log(Level.INFO, "[DEV]: " + object);
-        }
-    }
 
     public static void all(Object object) {
         log(Level.ALL, object);
@@ -66,12 +57,6 @@ public class LogHelper {
     }
 
     //log with format.
-
-    public static void dev(String object, Object... format) {
-        if (!ObfMapping.obfuscated) {
-            log(Level.INFO, "[DEV]: " + String.format(object, format));
-        }
-    }
 
     public static void all(String object, Object... format) {
         log(Level.ALL, String.format(object, format));

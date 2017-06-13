@@ -22,6 +22,8 @@ item.se:plate.2.name=Bronze Plate
 item.se:plate.3.name=Silver Plate
 item.se:plate.4.name=Lead Plate
 item.se:plate.5.name=Steel Plate
+item.se:plate.6.name=Iron Plate
+item.se:plate.7.name=Gold Plate
 
 item.se:dust.0.name=Copper Dust
 item.se:dust.1.name=Tin Dust
@@ -30,6 +32,10 @@ item.se:dust.3.name=Silver Dust
 item.se:dust.4.name=Lead Dust
 item.se:dust.5.name=Steel Dust
 item.se:dust.6.name=Carbon Dust
+item.se:dust.7.name=Iron Dust
+item.se:dust.8.name=Gold Dust
+item.se:dust.9.name=Diamond Dust
+item.se:dust.10.name=Emerald Dust
 
 item.se:capacitor_4k.name=Capacitor
 item.se:capacitor_8k.name=Capacitor
@@ -73,7 +79,6 @@ item.emerald_chest.name=Emerald Chestplate
 item.emerald_leggs.name=Emerald Leggings
 item.emerald_boots.name=Emerald Boots
 
-
 block.se:blockcopper.name=Copper Block
 block.se:blocktin.name=Tin Block
 block.se:blockbronze.name=Bronze Block
@@ -94,11 +99,9 @@ block.se:blocksteelcase.name=Reactor Casing
 
 block.se:blockmeteorite.name=Meteorite Block
 
-block.se:blockStarGenerator.name=Star-Flux Generator
-block.se:blockNetherStarGenerator.name=Nether Star Generator
-block.se:blockFurnaceGenerator.name=Furnace Generator
-block.se:blockFluxRepairer.name=Star-Flux Repairer
+tile.blockfluxrepairer.name=Flux-Repairer
 
+//tooltips
 se.lava.tooltip1=Acts as infinitely full lava bucket
 se.lava.tooltip2=Right click to fill tanks
 
@@ -113,8 +116,10 @@ tooltip.se.capacitor.discharge=Charging other items in inventory
 tooltip.se.capacitor.noDischarge=Not charging other items in inventory
 tooltip.se.capacitor.changeMode=Sneak-right-click to toggle
 
-info.se.hasSavedData.txt=Contents Saved!
-info.se.energyBuffer.txt=Energy Stored
-starexpansion.stargenerator.gui.name=Star-Flux Generator
-starexpansion.furnacegenerator.gui.name=Furnace Generator
-starexpansion.netherstargenerator.gui.name=Nether Star Generator
+//version
+se.version.demand.0=HEY YOU! I'M OUTDATED! FIX THAT!
+se.version.demand.1=STILL OUTDATED! UPDATE OR I WILL DESTROY MYSELF!
+se.version.demand.2=DONALD TRUMP IS PRESIDENT AS LONG AS YOU WON'T UPDATE! COVFEFE!
+
+se.version.outdated=At the moment you are playing with Star Expansion build %s, the latest build is %s.
+se.version.updateMessage=Soon you will get a link to CurseForge so you can download the newest version of Star Expansion within Minecraft.

@@ -5,6 +5,7 @@ import java.util.List;
 
 import cofh.api.energy.ItemEnergyContainer;
 import de.se.StarExpansion;
+import de.se.common.lib.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -13,7 +14,10 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import scala.reflect.macros.NonemptyAttachments;
+
+/*
+ * This class was created by Ellpeck and modified by Kendoshiii
+ */
 
 public class ItemEnergyBase extends ItemEnergyContainer{
 
@@ -22,7 +26,7 @@ public class ItemEnergyBase extends ItemEnergyContainer{
 	public ItemEnergyBase(int capacity, int maxReceive, String name) {
 		super(capacity, maxReceive);
 		this.name = name;
-		this.setRegistryName(StarExpansion.MODID, name);
+		this.setRegistryName(Reference.MODID, name);
 		this.setHasSubtypes(true);
         this.setMaxStackSize(1);
         this.setCreativeTab(StarExpansion.INSTANCE.tab);
@@ -30,7 +34,7 @@ public class ItemEnergyBase extends ItemEnergyContainer{
 	
 	@Override
 	public String getUnlocalizedName(){
-		return "item." + StarExpansion.MODID + ":" + name;
+		return "item." + Reference.MODID + ":" + name;
 	}
 	
 	@Override

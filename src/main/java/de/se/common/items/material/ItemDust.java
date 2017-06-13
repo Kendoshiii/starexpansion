@@ -15,6 +15,10 @@ public class ItemDust extends ItemBase{
 	public static final int DUST_LEAD = 4;
 	public static final int DUST_STEEL = 5;
 	public static final int DUST_CARBON = 6;
+	public static final int DUST_IRON = 7;
+	public static final int DUST_GOLD = 8;
+	public static final int DUST_DIAMOND = 9;
+	public static final int DUST_EMERALD = 10;
 	
 	public ItemDust() {
 		super("dust");
@@ -25,7 +29,7 @@ public class ItemDust extends ItemBase{
 	
 	@Override
 	public void getSubItems(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
-		for (int i = 0; i<=6; i++){
+		for (int i = 0; i<=10; i++){
 			list.add(new ItemStack(item, 1, i));
 		}
 	}

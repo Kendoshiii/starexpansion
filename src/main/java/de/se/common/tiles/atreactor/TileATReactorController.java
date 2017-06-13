@@ -43,9 +43,7 @@ public class TileATReactorController extends TileEntity implements ITickable{
 		
 		getGeneratorBlocks().add(SEBlocks.RADIANT_BLOCK);
 		getGeneratorBlocks().add(Blocks.AIR);
-		
-		/*getAcceleratorBlocks().add(Blocks.REDSTONE_BLOCK);
-		getAcceleratorBlocks().add(Blocks.AIR);*/
+
 	}
 	
 	public int getGeneratorBlockCount()
