@@ -32,8 +32,8 @@ public class BlackListCommand extends CommandBase{
 			sender.sendMessage(new TextComponentString("This command must be issued while holding the item to be blacklisted."));
 			return;
 		}
-		ConfigValues.blacklist.add(player.getActiveItemStack().getUnlocalizedName());
-		ConfigValues.blProperty.set(ConfigValues.blacklist.toArray(new String[ConfigValues.blacklist.size()]));
+		ConfigValues.repairerBlacklist.add(player.getActiveItemStack().getUnlocalizedName());
+		ConfigValues.blProperty.set(ConfigValues.repairerBlacklist.toArray(new String[ConfigValues.repairerBlacklist.size()]));
 		Config.cfg.save();
 	}
 	

@@ -71,7 +71,7 @@ public class TileRepairer extends TileEntityLockableLoot implements ITickable{
 	}
 
 	private boolean isExtractable() {
-		return !getStackInSlot(0).isItemDamaged() || !(getStackInSlot(0).getItem().isRepairable() || getStackInSlot(0).getItem().getClass().toString().contains("slimeknights.tconstruct.tools")) || ConfigValues.blacklist.contains(getStackInSlot(0).getItem().getUnlocalizedName()) || (ConfigValues.restrictRepairs && !(getStackInSlot(0).getItem() instanceof ItemTool || getStackInSlot(0).getItem() instanceof ItemArmor || getStackInSlot(0).getItem() instanceof ItemSword || getStackInSlot(0).getItem() instanceof ItemBow));
+		return !getStackInSlot(0).isItemDamaged() || !(getStackInSlot(0).getItem().isRepairable() || getStackInSlot(0).getItem().getClass().toString().contains("slimeknights.tconstruct.tools")) || ConfigValues.repairerBlacklist.contains(getStackInSlot(0).getItem().getUnlocalizedName()) || (ConfigValues.restrictRepairs && !(getStackInSlot(0).getItem() instanceof ItemTool || getStackInSlot(0).getItem() instanceof ItemArmor || getStackInSlot(0).getItem() instanceof ItemSword || getStackInSlot(0).getItem() instanceof ItemBow));
 	}
 
 	private void ejectItem() {
